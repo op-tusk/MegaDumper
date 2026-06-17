@@ -15,9 +15,9 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    # Compile the .sln file into a Release executable
+# Compile the .csproj file directly to bypass the broken solution file
     - name: Compile Solution to EXE
-      run: msbuild MegaDumper.sln /p:Configuration=Release /p:Platform="Any CPU"
+      run: msbuild MegaDumper/MegaDumper.csproj /p:Configuration=Release /p:Platform="AnyCPU"
 
     # Upload the compiled binary so you can download it
     - name: Upload Finished Artifact
