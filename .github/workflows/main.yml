@@ -11,8 +11,8 @@ jobs:
     - name: Checkout Source Code
       uses: actions/checkout@v4
 
-    # Setup the MSBuild environment (Visual Studio compiler tools)
-    . name: Setup MSBuild
+# Setup the MSBuild environment (Visual Studio compiler tools)
+    - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
     # Compile the .sln file into a Release executable
